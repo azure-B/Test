@@ -14,17 +14,19 @@
             $("#visits").text(response.value);
         });
     </script>
-    <div class="container">
-        <h1>복권을 긁어보세요!</h1>
-        <!-- 당첨/꽝 결과 표시를 위한 영역 -->
-        <div class="scratch-area">
-            <canvas id="scratchCanvas" width="300" height="150"></canvas>
-            <div id="resultText"></div>
+    <div id="visits">
+        <div class="container">
+            <h1>복권을 긁어보세요!</h1>
+            <!-- 당첨/꽝 결과 표시를 위한 영역 -->
+            <div class="scratch-area">
+                <canvas id="scratchCanvas" width="300" height="150"></canvas>
+                <div id="resultText"></div>
+            </div>
+            <button id="resetButton">다시 시도</button>
         </div>
-        <button id="resetButton">다시 시도</button>
+        
     </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
     
 </body>
 </html>
