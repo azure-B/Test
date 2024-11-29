@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복권 긁기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
+</head>
+<body>
+    <script>
+        $.getJSON("https://api.countapi.xyz/hit/mysite.com/visits", function(response) {
+            $("#visits").text(response.value);
+        });
+    </script>
+    <div class="container">
+        <h1>복권을 긁어보세요!</h1>
+        <!-- 당첨/꽝 결과 표시를 위한 영역 -->
+        <div class="scratch-area">
+            <canvas id="scratchCanvas" width="300" height="150"></canvas>
+            <div id="resultText"></div>
+        </div>
+        <button id="resetButton">다시 시도</button>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
