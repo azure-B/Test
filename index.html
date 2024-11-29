@@ -10,8 +10,9 @@
 </head>
 <body>
     <script>
-        $.getJSON("https://api.countapi.xyz/hit/mysite.com/visits", function(response) {
+        $.getJSON("https://api.countapi.xyz/hit/https://azure-b.github.io/Test//visits", function(response) {
             $("#visits").text(response.value);
+            console.log($("#visits").text(response.value));
         });
     </script>
     <div id="visits">
