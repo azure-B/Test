@@ -12,7 +12,8 @@
     <script>
         $.getJSON("https://api.countapi.xyz/hit/https://azure-b.github.io/Test//visits", function(response) {
             $("#visits").text(response.value);
-            console.log($("#visits").text(response.value));
+            
+            $("#exam").html($("#visits").text(response.value));
         });
     </script>
     <div id="visits">
@@ -23,6 +24,7 @@
                 <canvas id="scratchCanvas" width="300" height="150"></canvas>
                 <div id="resultText"></div>
             </div>
+            <span id="exam"></span>
             <button id="resetButton">다시 시도</button>
         </div>
         
